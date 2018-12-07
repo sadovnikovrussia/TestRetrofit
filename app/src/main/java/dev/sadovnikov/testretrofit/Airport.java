@@ -20,6 +20,23 @@ class Airport {
     public Airport() {
     }
 
+    public Airport(String code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Coordinates getCoordinates() {
+        return coordinates;
+    }
+
     @NonNull
     @Override
     public String toString() {
@@ -31,7 +48,7 @@ class Airport {
     }
 
 
-    static private class Coordinates {
+    static class Coordinates {
 
         @SerializedName("lon")
         private Float lon;
